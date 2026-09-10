@@ -10,25 +10,11 @@ export default function SingleUser() {
 
     const [user, setUser] = useState([])
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-
-    //         const data = await response.json()
-    //         setUser(data);
-    //     };
-    //     fetchData();
-    // }, []);
-
-
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             const data = await response.json()
             setUser(data)
-            // console.log("data: ", data)
-            // console.log("UserData: ", userData)
-
         }
         fetchData()
     }, [])
@@ -39,7 +25,7 @@ export default function SingleUser() {
             User {id} data: 
             
             {/* display single user data from user */}
-            
+
 
         </div>
     );
