@@ -6,6 +6,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router';
 import Cards from './components/Cards';
 import Table from './components/Table';
 import SingleUser from './components/SingleUser';
+import Sorting from './components/sorting';
 
 function App() {
 
@@ -38,6 +39,9 @@ function App() {
                 <li className="nav-item">
                   <Link className="nav-link" to="/cards">Cards</Link>
                 </li>
+                <li>
+                  <Link className="nav-link" to="/sorting">Sorting</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -46,6 +50,7 @@ function App() {
           <Route path="/table" element={<Table users={users}/>} />
           <Route path="/cards" element={<Cards users={users}/>} />
           <Route path='/users/:userId' element={<SingleUser/>} />
+          <Route path='/sorting' element={<Sorting users={users}/>} />
         </Routes>
       </BrowserRouter >
 
